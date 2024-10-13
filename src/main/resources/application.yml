@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: url-shortener
+
+  datasource:
+    url: ${DB_HOST:jdbc:postgresql://localhost:6543/postgres}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:Root@123}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database: postgresql
+
+cache:
+  urls:
+    maximum-size: 10000
+    expiration-time: 3600
